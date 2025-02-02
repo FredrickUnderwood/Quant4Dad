@@ -1,6 +1,6 @@
 # Quant4Dad
-
-#### 1. factor format
-- ma_5: moving average during last 5 trade days
-- pc_5: percent change during last 5 trade days
-- cp_5: close price 5 days ago
+### 为老爸开发的极简回测软件 Simple Backtest Software for my Dad
+TODO
+- 手续费、印花税等
+- 登录功能
+- 服务器部署
