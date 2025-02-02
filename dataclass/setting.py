@@ -1,4 +1,3 @@
 class Setting:
-    def __init__(self, init_cash, commission_rate):
+    def __init__(self, init_cash):
         self.init_cash = init_cash
-        self.commission_rate = commission_rate

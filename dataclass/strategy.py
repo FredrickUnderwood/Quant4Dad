@@ -47,3 +47,7 @@ def insert(strategy: Strategy):
 def get_by_id(id):
     session = init_session()
     return session.query(Strategy).filter_by(id=id).first()
+
+def get_all_strategies():
+    session = init_session()
+    return session.query(Strategy).all()

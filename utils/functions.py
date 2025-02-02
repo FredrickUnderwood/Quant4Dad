@@ -10,7 +10,7 @@ def get_factor_value(data, current_date, factor):
     elif 'pc' in factor:
         window = int(factor[3:])  # 提取窗口大小，如 'pc_10' -> 10
         return calculate_pct_change(data, current_date, window)
-    else:
+    elif 'cp' in factor:
         window = int(factor[3:])
         current_date_index = data[data['trade_date'] >= current_date].index[0]
         target_index = max(current_date_index - window, 0)
@@ -18,6 +18,8 @@ def get_factor_value(data, current_date, factor):
             return float(data.iloc[target_index]['close'])
         except IndexError:
             return None
+    else:
+        return float(factor)
 
 
 def get_decision(data, current_date, factor_1, factor_2, relation):
@@ -54,7 +56,7 @@ def refresh_df_position(df_position, stock, transaction_type, amount, deal_price
 
 
 def get_true_sell_amount(df_position, stock, amount):
-    current_volume = df_position[df_position['stock'] == stock]['volume']
+    current_volume = df_position[df_position['stock'] == stock]['volume'].item()
     if not '%' in amount:
         if int(amount) <= int(current_volume):
             return int(amount)

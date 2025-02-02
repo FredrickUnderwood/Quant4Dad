@@ -2,13 +2,15 @@ from config.common_config import common_config
 from dataclass import strategy
 from dataclass import setting
 from utils.functions import *
-from utils.trade_log import print_log, print_result
+from utils.trade_log import TradeLogger
 from data.collect_data import CollectData
 import pandas as pd
 import datetime
+import os
 
-
-def run_back_test(strategy: strategy.Strategy, setting: setting.Setting):
+def do_run_backtest(strategy: strategy.Strategy, setting: setting.Setting) -> dict:
+    logger = TradeLogger()
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     stocks = strategy.stocks.split(',')
     stock_count = len(stocks)
     startdate = int(strategy.startdate)
@@ -16,15 +18,15 @@ def run_back_test(strategy: strategy.Strategy, setting: setting.Setting):
     stock_data_list = []
     end_date_price_list = []
     for stock in stocks:
-        data_path = common_config.storage_base_path + stock + common_config.csv_extension
+        data_path = base_dir + common_config.storage_base_path + stock + common_config.csv_extension
         df = pd.read_csv(data_path)
         start_index = df[df['trade_date'] >= startdate].index[0]
         # 回退50个tick，用于构造均线等数据
         start_index = max(start_index - 50, 0)
         end_index = df[df['trade_date'] <= enddate].index[-1]
+        end_date_price_list.append(df.iloc[end_index]['close'].item())
         sliced_df = df.iloc[start_index:end_index + 1].reset_index(drop=True)
-        sliced_df = sliced_df[['trade_date', 'close']]
-        end_date_price_list.append(sliced_df[sliced_df['trade_date'] == enddate]['close'].item())
+        sliced_df = sliced_df[['trade_date', 'open', 'high', 'low', 'close', 'vol']]
         stock_data_list.append(sliced_df)
 
     buy_factors_1 = strategy.buy_factors_1.split(',')
@@ -57,12 +59,12 @@ def run_back_test(strategy: strategy.Strategy, setting: setting.Setting):
                         deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
                         cash += true_amount * deal_price
                         df_position = refresh_df_position(df_position, stock, 'sell', true_amount, deal_price)
-                        print_log(df_position, stock, '卖出', cash, deal_price, true_amount, trade_date)
+                        logger.log_trade(df_position, stock, '卖出', cash, deal_price, true_amount, trade_date)
             for factor_1, factor_2, relation, amount in zip(buy_factors_1, buy_factors_2, buy_relations, buy_amounts):
                 if get_decision(stock_data, trade_date, factor_1, factor_2, relation):
                     current_index = stock_data[stock_data['trade_date'] >= trade_date].index[0]
                     try:
-                        deal_price = float(stock_data.iloc[current_index + 1]['close'])
+                        deal_price = float(stock_data.iloc[current_index + 1]['open'])
                     except IndexError:
                         break
                     true_amount = get_true_buy_amount(cash, amount, deal_price)
@@ -70,9 +72,6 @@ def run_back_test(strategy: strategy.Strategy, setting: setting.Setting):
                     if true_amount > 0:
                         cash -= true_amount * deal_price
                         df_position = refresh_df_position(df_position, stock, 'buy', true_amount, deal_price)
-                        print_log(df_position, stock, '买入', cash, deal_price, true_amount, trade_date)
-    print_result(df_position, float(setting.init_cash), cash, end_date_price_list, stocks)
-
-strategy = strategy.Strategy(id=1, startdate='20240101', enddate='20241231', stocks='000001', buy_factors_1='cp_0,cp_0', buy_factors_2='cp_5,ma_5', buy_relations='lt,gt', sell_factors_1='cp_0', sell_factors_2='cp_1', sell_relations='gt', buy_amounts='50%,1000', sell_amounts='20%')
-setting = setting.Setting(10000000, 0.01)
-run_back_test(strategy, setting)
+                        logger.log_trade(df_position, stock, '买入', cash, deal_price, true_amount, trade_date)
+    logger.log_result(df_position, float(setting.init_cash), cash, end_date_price_list, stocks)
+    return logger.get_all_logs()

@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建策略</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .top-nav {
+            background: #1976D2;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-title {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-button {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .nav-button.active {
+            background: rgba(255,255,255,0.3);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        form > div {
+            margin-bottom: 20px;
+        }
+        .form-row {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .form-row > div {
+            flex: 1;
+        }
+        input[type="date"] {
+            width: 200px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .stock-search-container {
+            width: 300px;
+            position: relative;
+        }
+        #stockSearch {
+            width: 100%;
+            height: 36px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 0 12px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        #stockSearch:focus {
+            border-color: #1976D2;
+            outline: none;
+        }
+        .stock-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: white;
+            display: none;
+            z-index: 1000;
+            margin-top: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .stock-item {
+            padding: 10px 12px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .stock-item:hover {
+            background: #f5f5f5;
+        }
+        .selected-stocks {
+            margin-top: 10px;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            min-height: 50px;
+        }
+        .stock-tag {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 3px;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .stock-tag .remove {
+            margin-left: 8px;
+            cursor: pointer;
+            color: #ff4444;
+            font-weight: bold;
+        }
+        .stock-tag .remove:hover {
+            color: #cc0000;
+        }
+        .condition-group {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #eee;
+        }
+        .condition-list {
+            margin: 10px 0;
+        }
+        .condition-item {
+            margin: 5px 0;
+            padding: 5px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+        .remove-condition {
+            color: red;
+            cursor: pointer;
+            float: right;
+        }
+        .add-condition {
+            margin: 10px 0;
+            padding: 5px 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .add-condition:hover {
+            background: #45a049;
+        }
+        .factor-input {
+            display: inline-block;
+            margin: 5px;
+            position: relative;
+        }
+        .factor-input input[type="number"] {
+            width: 100px;
+            height: 36px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 0 12px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+            padding-right: 25px;
+            /* 隐藏 Chrome, Safari, Edge, Opera 的上下箭头 */
+            -webkit-appearance: none;
+            -moz-appearance: textfield;
+            margin: 0;
+        }
+        /* 隐藏 Firefox 的上下箭头 */
+        .factor-input input[type="number"]::-webkit-outer-spin-button,
+        .factor-input input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .factor-input input[type="number"]:focus {
+            border-color: #1976D2;
+            outline: none;
+        }
+        .factor-input select {
+            height: 36px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 0 12px;
+            transition: border-color 0.3s;
+            background-color: white;
+        }
+        .factor-input select:focus {
+            border-color: #1976D2;
+            outline: none;
+        }
+        .condition-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+        }
+        .buy-amount, .sell-amount {
+            height: 36px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 0 12px;
+            width: 120px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        .buy-amount:focus, .sell-amount:focus {
+            border-color: #1976D2;
+            outline: none;
+        }
+        .buy-relation, .sell-relation {
+            height: 36px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 0 12px;
+            transition: border-color 0.3s;
+            background-color: white;
+            box-sizing: border-box;
+        }
+        .buy-relation:focus, .sell-relation:focus {
+            border-color: #1976D2;
+            outline: none;
+        }
+        button[type="submit"] {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        button[type="submit"]:hover {
+            background: #45a049;
+        }
+        .factor-input.show-percent input[type="number"]::after {
+            content: "%";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <div class="nav-container">
+            <h1 class="nav-title">回测平台</h1>
+            <div class="nav-buttons">
+                <a href="/create_strategy" class="nav-button active">创建新策略</a>
+                <a href="/backtest" class="nav-button">执行回测</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>创建策略</h1>
+        <form id="strategyForm">
+            <div>
+                <label for="startdate">开始日期：</label>
+                <input type="date" id="startdate" name="startdate" required>
+            </div>
+            <div>
+                <label for="enddate">结束日期：</label>
+                <input type="date" id="enddate" name="enddate" required>
+            </div>
+            <div>
+                <label>股票代码：</label>
+                <div class="stock-search-container">
+                    <input type="text" id="stockSearch" placeholder="输入股票代码或名称搜索...">
+                    <div id="stockDropdown" class="stock-dropdown"></div>
+                </div>
+                <div id="selectedStocks" class="selected-stocks"></div>
+                <input type="hidden" id="stocks" name="stocks">
+            </div>
+            <!-- 买入条件 -->
+            <div class="condition-group">
+                <h3>买入条件</h3>
+                <div id="buyConditionsList" class="condition-list">
+                    <div class="condition-item">
+                        <span class="remove-condition" onclick="removeCondition(this, 'buy')">&times;</span>
+                        <div class="factor-input">
+                            <label>过去</label>
+                            <input type="number" class="buy-factor-1-window" placeholder="n" required min="1">
+                            <label>日</label>
+                            <select class="buy-factor-1-type">
+                                <option value="pc">涨幅(PC)</option>
+                                <option value="pc_down">跌幅(PC)</option>
+                                <option value="ma">均线(MA)</option>
+                                <option value="cp">收盘价(CP)</option>
+                                <option value="value">数值(VALUE)</option>
+                            </select>
+                        </div>
+                        <select class="buy-relation">
+                            <option value="lt">低于</option>
+                            <option value="gt">高于</option>
+                        </select>
+                        <div class="factor-input">
+                            <label>过去</label>
+                            <input type="number" class="buy-factor-2-window" placeholder="n" required min="1">
+                            <label>日</label>
+                            <select class="buy-factor-2-type">
+                                <option value="pc">涨幅(PC)</option>
+                                <option value="pc_down">跌幅(PC)</option>
+                                <option value="ma">均线(MA)</option>
+                                <option value="cp">收盘价(CP)</option>
+                                <option value="value" selected>数值(VALUE)</option>
+                            </select>
+                        </div>
+                        <label>买入数量：</label>
+                        <input type="text" class="buy-amount" placeholder="例:300,30%" required>
+                    </div>
+                </div>
+                <button type="button" class="add-condition" onclick="addCondition('buy')">添加买入条件</button>
+            </div>
+            <!-- 卖出条件 -->
+            <div class="condition-group">
+                <h3>卖出条件</h3>
+                <div id="sellConditionsList" class="condition-list">
+                    <div class="condition-item">
+                        <span class="remove-condition" onclick="removeCondition(this, 'sell')">&times;</span>
+                        <div class="factor-input">
+                            <label>过去</label>
+                            <input type="number" class="sell-factor-1-window" placeholder="n" required min="1">
+                            <label>日</label>
+                            <select class="sell-factor-1-type">
+                                <option value="pc">涨幅(PC)</option>
+                                <option value="pc_down">跌幅(PC)</option>
+                                <option value="ma">均线(MA)</option>
+                                <option value="cp">收盘价(CP)</option>
+                                <option value="value">数值(VALUE)</option>
+                            </select>
+                        </div>
+                        <select class="sell-relation">
+                            <option value="lt">低于</option>
+                            <option value="gt">高于</option>
+                        </select>
+                        <div class="factor-input">
+                            <label>过去</label>
+                            <input type="number" class="sell-factor-2-window" placeholder="n" required min="1">
+                            <label>日</label>
+                            <select class="sell-factor-2-type">
+                                <option value="pc">涨幅(PC)</option>
+                                <option value="pc_down">跌幅(PC)</option>
+                                <option value="ma">均线(MA)</option>
+                                <option value="cp">收盘价(CP)</option>
+                                <option value="value" selected>数值(VALUE)</option>
+                            </select>
+                        </div>
+                        <label>卖出数量：</label>
+                        <input type="text" class="sell-amount" placeholder="例:300,30%" required>
+                    </div>
+                </div>
+                <button type="button" class="add-condition" onclick="addCondition('sell')">添加卖出条件</button>
+            </div>
+            
+            <button type="submit">创建策略</button>
+        </form>
+    </div>
+
+    <script>
+        let allStocks = [];
+        let selectedStocks = new Set();
+
+        async function fetchStocks() {
+            try {
+                const response = await fetch('/api/stocks');
+                const result = await response.json();
+                if (result.success) {
+                    allStocks = result.data;
+                }
+            } catch (error) {
+                console.error('获取股票列表失败:', error);
+            }
+        }
+
+        fetchStocks();
+
+        function searchStocks(query) {
+            if (!query) {
+                document.getElementById('stockDropdown').style.display = 'none';
+                return;
+            }
+
+            const filtered = allStocks.filter(stock => 
+                stock.ts_code.toLowerCase().includes(query.toLowerCase()) ||
+                stock.name.toLowerCase().includes(query.toLowerCase())
+            ).slice(0, 10);
+
+            const dropdown = document.getElementById('stockDropdown');
+            dropdown.innerHTML = '';
+            
+            filtered.forEach(stock => {
+                const div = document.createElement('div');
+                div.className = 'stock-item';
+                div.textContent = `${stock.name} (${stock.ts_code})`;
+                div.onclick = () => selectStock(stock);
+                dropdown.appendChild(div);
+            });
+
+            dropdown.style.display = filtered.length ? 'block' : 'none';
+        }
+
+        function selectStock(stock) {
+            // 提取股票代码的前6位数字
+            const stockCode = stock.ts_code.substring(0, 6);
+            if (!selectedStocks.has(stockCode)) {
+                selectedStocks.add(stockCode);
+                updateSelectedStocksDisplay();
+            }
+            document.getElementById('stockDropdown').style.display = 'none';
+            document.getElementById('stockSearch').value = '';
+            updateStocksInput();
+        }
+
+        function updateSelectedStocksDisplay() {
+            const container = document.getElementById('selectedStocks');
+            container.innerHTML = '';
+            selectedStocks.forEach(stockCode => {
+                const stock = allStocks.find(s => s.ts_code.startsWith(stockCode));
+                if (stock) {
+                    const tag = document.createElement('span');
+                    tag.className = 'stock-tag';
+                    tag.innerHTML = `${stock.name} (${stockCode}) <span class="remove" onclick="removeStock('${stockCode}')">&times;</span>`;
+                    container.appendChild(tag);
+                }
+            });
+            updateStocksInput();
+        }
+
+        function removeStock(stockCode) {
+            selectedStocks.delete(stockCode);
+            updateSelectedStocksDisplay();
+        }
+
+        function updateStocksInput() {
+            document.getElementById('stocks').value = Array.from(selectedStocks).join(',');
+        }
+
+        document.getElementById('stockSearch').addEventListener('input', (e) => {
+            searchStocks(e.target.value);
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.stock-search-container')) {
+                document.getElementById('stockDropdown').style.display = 'none';
+            }
+        });
+
+        function addCondition(type) {
+            const template = `
+                <div class="condition-item">
+                    <span class="remove-condition" onclick="removeCondition(this, '${type}')">&times;</span>
+                    <div class="factor-input">
+                        <label>过去</label>
+                        <input type="number" class="${type}-factor-1-window" placeholder="n" required min="1">
+                        <label>日</label>
+                        <select class="${type}-factor-1-type">
+                            <option value="pc">涨幅(PC)</option>
+                            <option value="pc_down">跌幅(PC)</option>
+                            <option value="ma">均线(MA)</option>
+                            <option value="cp">收盘价(CP)</option>
+                            <option value="value">数值(VALUE)</option>
+                        </select>
+                    </div>
+                    <select class="${type}-relation">
+                        <option value="lt">低于</option>
+                        <option value="gt">高于</option>
+                    </select>
+                    <div class="factor-input">
+                        <label>过去</label>
+                        <input type="number" class="${type}-factor-2-window" placeholder="n" required min="1">
+                        <label>日</label>
+                        <select class="${type}-factor-2-type">
+                            <option value="pc">涨幅(PC)</option>
+                            <option value="pc_down">跌幅(PC)</option>
+                            <option value="ma">均线(MA)</option>
+                            <option value="cp">收盘价(CP)</option>
+                            <option value="value" selected>数值(VALUE)</option>
+                        </select>
+                    </div>
+                    <label>${type === 'buy' ? '买入' : '卖出'}数量：</label>
+                    <input type="text" class="${type}-amount" placeholder="例:300,30%" required>
+                </div>
+            `;
+            const conditionsList = document.getElementById(`${type}ConditionsList`);
+            conditionsList.insertAdjacentHTML('beforeend', template);
+            const newCondition = conditionsList.lastElementChild;
+            // 初始化右侧因子
+            const rightFactor = newCondition.querySelector(`.${type}-factor-2-type`);
+            const factorInput = rightFactor.closest('.factor-input');
+            const labels = factorInput.querySelectorAll('label');
+            labels.forEach(label => label.style.display = 'none');
+            const windowInput = factorInput.querySelector('input[type="number"]');
+            windowInput.placeholder = '输入数值';
+            windowInput.min = '';
+            windowInput.step = '0.01';
+            factorInput.classList.add('show-percent');
+        }
+
+        function removeCondition(element, type) {
+            const list = document.getElementById(`${type}ConditionsList`);
+            if (list.children.length > 1) {
+                element.closest('.condition-item').remove();
+            } else {
+                alert('至少需要保留一个条件');
+            }
+        }
+
+        function handleFactorTypeChange(select) {
+            const factorInput = select.closest('.factor-input');
+            const windowInput = factorInput.querySelector('input[type="number"]');
+            const labels = factorInput.querySelectorAll('label');
+            
+            if (select.value === 'value') {
+                labels.forEach(label => label.style.display = 'none');
+                windowInput.placeholder = '输入数值';
+                windowInput.min = '';
+                windowInput.step = '0.01';
+                factorInput.classList.add('show-percent');
+            } else {
+                labels.forEach(label => label.style.display = 'inline');
+                windowInput.placeholder = 'n';
+                windowInput.min = '1';
+                windowInput.step = '1';
+                if (select.value === 'pc' || select.value === 'pc_down') {
+                    factorInput.classList.add('show-percent');
+                } else {
+                    factorInput.classList.remove('show-percent');
+                }
+            }
+        }
+
+        function collectConditions(type) {
+            const factors1 = [];
+            const factors2 = [];
+            const relations = [];
+            const amounts = [];
+
+            // 收集因子1的值
+            const factor1Windows = document.querySelectorAll(`.${type}-factor-1-window`);
+            const factor1Types = document.querySelectorAll(`.${type}-factor-1-type`);
+            const relationEls = document.querySelectorAll(`.${type}-relation`);
+            if (factor1Windows.length !== factor1Types.length) {
+                throw new Error(`${type}条件的因子1配置不完整`);
+            }
+            for (let i = 0; i < factor1Windows.length; i++) {
+                if (!factor1Windows[i].value) {
+                    throw new Error(`请输入${type}条件的因子1窗口期`);
+                }
+                if (factor1Types[i].value === 'value') {
+                    if (factor1Types[i].value === 'pc') {
+                        const value = parseFloat(factor1Windows[i].value);
+                        if (isNaN(value)) {
+                            throw new Error('涨跌幅必须是有效的数字');
+                        }
+                        factors1.push(value.toString());
+                    } else {
+                        factors1.push(factor1Windows[i].value);
+                    }
+                } else if (factor1Types[i].value === 'pc_down') {
+                    // 处理跌幅：取反数值，反转关系
+                    const value = parseFloat(factor1Windows[i].value);
+                    if (isNaN(value)) {
+                        throw new Error('跌幅必须是有效的数字');
+                    }
+                    factors1.push(`pc_${value}`);
+                } else {
+                    factors1.push(`${factor1Types[i].value}_${factor1Windows[i].value}`);
+                }
+            }
+            
+            // 收集因子2的值
+            const factor2Windows = document.querySelectorAll(`.${type}-factor-2-window`);
+            const factor2Types = document.querySelectorAll(`.${type}-factor-2-type`);
+            if (factor2Windows.length !== factor2Types.length) {
+                throw new Error(`${type}条件的因子2配置不完整`);
+            }
+            for (let i = 0; i < factor2Windows.length; i++) {
+                if (!factor2Windows[i].value) {
+                    throw new Error(`请输入${type}条件的因子2窗口期`);
+                }
+                if (factor2Types[i].value === 'value') {
+                    if (factor2Types[i].value === 'pc') {
+                        const value = parseFloat(factor2Windows[i].value);
+                        if (isNaN(value)) {
+                            throw new Error('涨跌幅必须是有效的数字');
+                        }
+                        factors2.push(value.toString());
+                    } else {
+                        // 如果因子1是跌幅，且因子2是数值，则对因子2的值取反
+                        const value = parseFloat(factor2Windows[i].value);
+                        if (isNaN(value)) {
+                            throw new Error('数值必须是有效的数字');
+                        }
+                        if (factor1Types[i].value === 'pc_down') {
+                            factors2.push((-value).toString());
+                        } else {
+                            factors2.push(factor2Windows[i].value);
+                        }
+                    }
+                } else if (factor2Types[i].value === 'pc_down') {
+                    // 处理跌幅：取反数值，反转关系
+                    const value = parseFloat(factor2Windows[i].value);
+                    if (isNaN(value)) {
+                        throw new Error('跌幅必须是有效的数字');
+                    }
+                    factors2.push(`pc_${value}`);
+                    // 反转关系（gt 变 lt，lt 变 gt）
+                    const relationEl = document.querySelectorAll(`.${type}-relation`)[i];
+                    relationEl.value = relationEl.value === 'gt' ? 'lt' : 'gt';
+                } else {
+                    factors2.push(`${factor2Types[i].value}_${factor2Windows[i].value}`);
+                }
+            }
+
+            // 收集并处理关系
+            for (let i = 0; i < relationEls.length; i++) {
+                let relation = relationEls[i].value;
+                // 如果是跌幅，反转关系
+                if (factor1Types[i].value === 'pc_down') {
+                    relation = relation === 'gt' ? 'lt' : 'gt';
+                }
+                relations.push(relation);
+            }
+
+            document.querySelectorAll(`.${type}-amount`).forEach(el => {
+                if (!el.value) {
+                    throw new Error(`请输入${type}数量`);
+                }
+                amounts.push(el.value.trim());
+            });
+
+            return {
+                factors1: factors1.join(','),
+                factors2: factors2.join(','),
+                relations: relations.join(','),
+                amounts: amounts.join(',')
+            };
+        }
+
+        document.getElementById('strategyForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const buyConditions = collectConditions('buy');
+            const sellConditions = collectConditions('sell');
+            
+            // 转换日期格式
+            function formatDate(dateStr) {
+                return dateStr.replace(/-/g, '');
+            }
+            
+            const formData = {
+                startdate: formatDate(document.getElementById('startdate').value),
+                enddate: formatDate(document.getElementById('enddate').value),
+                stocks: Array.from(selectedStocks).join(','),
+                buy_factors_1: buyConditions.factors1,
+                buy_factors_2: buyConditions.factors2,
+                buy_relations: buyConditions.relations,
+                buy_amounts: buyConditions.amounts,
+                sell_factors_1: sellConditions.factors1,
+                sell_factors_2: sellConditions.factors2,
+                sell_relations: sellConditions.relations,
+                sell_amounts: sellConditions.amounts
+            };
+
+            try {
+                const response = await fetch('/api/strategy/create', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                const result = await response.json();
+                if (result.success) {
+                    alert('策略创建成功！');
+                } else {
+                    alert('创建失败：' + result.message);
+                }
+            } catch (error) {
+                alert('发生错误：' + error.message);
+            }
+        });
+
+        // 为所有因子类型选择框添加变化事件监听
+        document.addEventListener('change', function(e) {
+            if (e.target.matches('.buy-factor-1-type, .buy-factor-2-type, .sell-factor-1-type, .sell-factor-2-type')) {
+                handleFactorTypeChange(e.target);
+            }
+        });
+
+        // 页面加载时初始化右侧因子为数值类型
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化所有右侧因子
+            const rightFactors = document.querySelectorAll('.buy-factor-2-type, .sell-factor-2-type');
+            rightFactors.forEach(select => {
+                // 先设置值
+                select.value = 'value';
+                // 获取相关的 label 元素
+                const factorInput = select.closest('.factor-input');
+                const labels = factorInput.querySelectorAll('label');
+                // 隐藏 label
+                labels.forEach(label => label.style.display = 'none');
+                // 修改输入框属性
+                const windowInput = factorInput.querySelector('input[type="number"]');
+                windowInput.placeholder = '输入数值';
+                windowInput.min = '';
+                windowInput.step = '0.01';
+                // 添加百分号样式
+                factorInput.classList.add('show-percent');
+            });
+        });
+    </script>
+</body>
+</html> 
