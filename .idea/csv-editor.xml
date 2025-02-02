@@ -619,6 +619,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\storage\920128.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

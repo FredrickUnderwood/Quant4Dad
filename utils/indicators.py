@@ -13,7 +13,7 @@ def calculate_moving_average(data, current_date, period):
         raise ValueError("Period must be a positive integer")
 
     try:
-        current_index = data[data['trade_date'] == current_date].index[0]
+        current_index = data[data['trade_date'] >= current_date].index[0]
     except IndexError:
         raise ValueError(f"Date {current_date} not found in the data")
 
@@ -36,7 +36,7 @@ def calculate_pct_change(data, current_date, period):
         raise ValueError("Period must be a positive integer")
 
     try:
-        current_index = data[data['trade_date'] == current_date].index[0]
+        current_index = data[data['trade_date'] >= current_date].index[0]
     except IndexError:
         raise ValueError(f"Date {current_date} not found in the data")
 
