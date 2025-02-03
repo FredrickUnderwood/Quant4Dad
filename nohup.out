@@ -1,0 +1,1099 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.27.58.136:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 407-832-881
+112.49.96.2 - - [04/Feb/2025 01:54:25] "GET /api/logout HTTP/1.1" 302 -
+112.49.96.2 - - [04/Feb/2025 01:54:25] "GET /login HTTP/1.1" 200 -
+112.49.96.2 - - [04/Feb/2025 01:54:29] "POST /api/login HTTP/1.1" 200 -
+112.49.96.2 - - [04/Feb/2025 01:54:29] "GET /backtest HTTP/1.1" 200 -
+112.49.96.2 - - [04/Feb/2025 01:54:29] "GET /api/strategies/1 HTTP/1.1" 200 -
+/root/workspace/quant4dad/utils/trade_log.py:29: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:30: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  float(df_position[df_position['stock'] == stock]['cost'])
+112.49.96.2 - - [04/Feb/2025 01:54:33] "POST /api/backtest/run HTTP/1.1" 200 -
+/root/workspace/quant4dad/utils/functions.py:53: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '[213.45]' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  df_position_updated.loc[df_position_updated['stock'] == stock, 'cost'] = new_cost
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/core/backtest.py:59: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  deal_price = float(stock_data[stock_data['trade_date'] == trade_date]['close'])
+/root/workspace/quant4dad/utils/functions.py:44: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  if int(origin_volume) - int(amount) != 0:
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:10: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:11: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  round(float(df_position[df_position['stock'] == stock]['cost']), 3)
+/root/workspace/quant4dad/utils/trade_log.py:29: FutureWarning: Calling int on a single element Series is deprecated and will raise a TypeError in the future. Use int(ser.iloc[0]) instead
+  current_volume, current_cost = int(df_position[df_position['stock'] == stock]['volume']), \
+/root/workspace/quant4dad/utils/trade_log.py:30: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  float(df_position[df_position['stock'] == stock]['cost'])
+112.49.96.2 - - [04/Feb/2025 01:54:42] "POST /api/backtest/run HTTP/1.1" 200 -
+ * Detected change in '/root/workspace/quant4dad/dataclass/user.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 407-832-881
